@@ -124,10 +124,13 @@ h1{
 }
 .container:last-child{
     width: 70%;
+    margin: 100px auto;
     h1,p,h4{
         text-align: center;
     }
     .confirm{
+        width: 80%;
+        margin: auto;
         font-weight: 500;
         color: variable.$text-color-jumbotron;
         span:last-child{
@@ -140,8 +143,8 @@ h1{
     
 }
 .little-container{
-    width: 100%;
-    margin: 50px 0 20px;
+    width: 80%;
+    margin: 50px auto 20px;
     padding: 20px;
     border-radius: 15px;
     background-color: variable.$little-container-bg-color;
