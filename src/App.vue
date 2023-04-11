@@ -32,6 +32,22 @@
           'fa-brands fa-github',
           'fa-solid fa-circle-info',
           'fa-regular fa-user'
+        ],
+        FooterLinkSocial:[
+          'fa-brands fa-facebook-f',
+          'fa-brands fa-instagram',
+          'fa-brands fa-twitter',
+          'fa-brands fa-linkedin-in'
+        ],
+        FooterLinkGeneral:[
+          {
+            section:'Company',
+            link:['About us','Sevices','Team','Pricing','Project','Careers','Blog','Login']
+          },
+          {
+            section:'Usefull Links',
+            link:['Terms of Services','Privacy Policy','Documentation','ChangeLog','Components']
+          }
         ]
       }
     }
@@ -47,7 +63,11 @@
 
   <MyMain/>
 
-  <MyFooter/>
+  <MyFooter
+    :socialLink="FooterLinkSocial"
+    :generalLink="FooterLinkGeneral"
+    :typeOfCard="FooterTypeOfCard"
+  />
 
 </template>
 
