@@ -42,6 +42,7 @@
     
     header{
         padding: 10px 0;
+        background-color: variable.$background-jumbotron;
     }
     .container{
         display: flex;
