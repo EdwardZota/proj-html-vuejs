@@ -203,4 +203,19 @@ form {
         top: 4px;
         right: 4px;
     }
-}</style>
+}
+@media screen and (max-width:630px) {
+    .cards{
+        flex-wrap: wrap;
+        .card{
+            width: 80%;
+            margin: 0 auto 50px;
+        }
+    }
+    form{
+        width: 90%;
+    }
+    
+}
+
+</style>

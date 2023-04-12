@@ -76,6 +76,9 @@ export default {
         top: 80px;
         left: 0;
     }
+    .rightSide img{
+        width: 100%;
+    }
 }
 
 .container {
@@ -137,4 +140,25 @@ hr {
 .rightSide {
     width: 50%;
 
-}</style>
+}
+@media screen and (max-width:630px) {
+    .container{
+        flex-wrap: wrap;
+        .leftSide{
+            width: 100%;
+        }
+        .rightSide{
+            width: 70%;
+            margin: auto;
+        }
+    }
+    
+}
+@media screen and (max-width:420px) {
+    .setting{
+        display: none;
+    }
+    
+}
+
+</style>

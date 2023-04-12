@@ -135,6 +135,7 @@ export default {
                 font-size: 250px;
                 color: variable.$bg-image-color;
                 opacity: 0;
+                transition: all 0.5s;
 
             }
 
@@ -233,4 +234,34 @@ h1 {
             color: variable.$symbol-color-keyFeatures;
         }
     }
-}</style>
+}
+@media screen and (max-width:768px) {
+    .container .cards{
+        flex-wrap: wrap;
+        .card{
+        width: 48%;
+        margin-bottom: 30px;
+    }
+    }
+    .little-container{
+        width: 100%;
+        
+    }
+    .confirm span:nth-last-child(2){
+        margin-left: -50px;
+    }
+    
+}
+
+@media screen and (max-width:420px) {
+    .container:last-child{
+        width: 100%;
+        .cards .card{
+        width: 100%;
+    }
+    .confirm{
+        margin-left: 50px;
+    }
+}
+}
+</style>

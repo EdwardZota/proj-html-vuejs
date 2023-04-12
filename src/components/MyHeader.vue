@@ -97,4 +97,17 @@ li {
         background-color: variable.$header-color-text-btn;
         color: variable.$header-shadow-btn;
     }
-}</style>
+}
+@media screen and (max-width:768px) {
+    .RightNav{
+        display: none;
+    }
+    
+}
+@media screen and (max-width:630px) {
+    .middleNav ul li:nth-child(1n+2){
+        display: none;
+    }
+    
+}
+</style>

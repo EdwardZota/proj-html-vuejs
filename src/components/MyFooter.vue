@@ -214,4 +214,41 @@ footer {
         left: 0;
         bottom: 100px;
     }
-}</style>
+}
+@media screen and (max-width:1200px) {
+    .topRightFooter i.fa-regular.fa-envelope{
+        top: 116px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    
+    footer .topMiddleFooter,.bottomFooter button{
+        display: none;
+    }
+    footer .topLeftFooter,footer .topRightFooter{
+        width: 45%;
+    }
+    footer ul li{
+        width: 20px;
+        img{
+            width: 100%;
+        }
+        
+    }
+}
+
+@media screen and (max-width:420px) {
+    .container .topFooter{
+        flex-wrap: wrap;
+        .topLeftFooter,footer .topRightFooter{
+        width: 100%;
+        margin-bottom: 20px;
+        }
+        .topRightFooter i{
+            top: 138px;
+        }
+    }
+}
+
+</style>

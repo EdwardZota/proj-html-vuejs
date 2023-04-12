@@ -47,6 +47,11 @@ export default {
     }
 }
 
+.leftSide{
+    width: 70%;
+    padding-right: 20%;
+}
+
 p,
 ul li {
     color: variable.$text-color-build-tools;
@@ -84,4 +89,20 @@ button {
     img {
         width: 100%;
     }
-}</style>
+}
+@media screen and (max-width:1200px) {
+    .leftSide{
+    padding-right: 10%;
+    }
+    
+}
+
+@media screen and (max-width:420px) {
+    .container{
+        flex-wrap: wrap;
+        .leftSide,.rightSide{
+            width: 100%;
+        }
+    }
+}
+</style>
