@@ -15,11 +15,15 @@ export default {
             <img src="../assets/logo-dark.png" alt="Logo">
             <nav class="middleNav">
                 <ul>
-                    <li v-for="elemento in HeaderNav">
+                    <li v-for="elemento in HeaderNav" class="element">
                         {{ elemento.category.toUpperCase() }}
                         <div v-if="elemento.dropDown">
-                            <i class="fa-solid fa-chevron-down "></i>
-                            
+                            <div class="dropdown">
+                                <i class="fa-solid fa-chevron-down dropbtn"></i>
+                                <div class="dropdown-content">
+                                    <a href="#" v-for="(link,i) in elemento.dropDown" :key="i">{{ link }}</a>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -42,6 +46,34 @@ export default {
 
 <style lang="scss" scoped>
 @use '../styles/partials/variable';
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: -60px;
+    min-width: 100px;
+    z-index: 1;
+    background-color: variable.$header-shadow-btn;
+}
+
+.dropdown-content a {
+    color: variable.$header-color-text-btn;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.element:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: variable.$header-color-text-btn;
+    color: variable.$header-shadow-btn;
+}
 
 header {
     padding: 10px 0;
