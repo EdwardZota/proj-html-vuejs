@@ -1,85 +1,75 @@
 <script>
-  import MyHeader from './components/MyHeader.vue';
-  import MyMain from './components/MyMain.vue';
-  import MyFooter from './components/MyFooter.vue';
+import MyHeader from './components/MyHeader.vue';
+import MyMain from './components/MyMain.vue';
+import MyFooter from './components/MyFooter.vue';
 
-  export default {
-    components:{
-      MyHeader,
-      MyMain,
-      MyFooter
-    },
-    data(){
-      return{
-        HeaderNavMiddle:[
-          {
-            category:'Home'
-          },
-          {
-            category:'Landing',
-            dropDown:[]
-          },
-          {
-            category:'Pages',
-            dropDown:[]
-          },
-          {
-            category:'Docs',
-            dropDown:[]
-          },
-        ],
-        HeaderNavRight:[
-          'fa-brands fa-github',
-          'fa-solid fa-circle-info',
-          'fa-regular fa-user'
-        ],
-        
-        FooterLinkSocial:[
-          'fa-brands fa-facebook-f',
-          'fa-brands fa-instagram',
-          'fa-brands fa-twitter',
-          'fa-brands fa-linkedin-in'
-        ],
-        FooterLinkGeneral:[
-          {
-            section:'Company',
-            link:['About us','Sevices','Team','Pricing','Project','Careers','Blog','Login']
-          },
-          {
-            section:'Usefull Links',
-            link:['Terms of Services','Privacy Policy','Documentation','ChangeLog','Components']
-          }
-        ],
-        PaymentMethods:[
-          'american-ex.png',
-          'discover.png',
-          'master-card.png',
-          'paypal.png',
-          'visa.png'
-        ],
-      }
+export default {
+  components: {
+    MyHeader,
+    MyMain,
+    MyFooter
+  },
+  data() {
+    return {
+      HeaderNavMiddle: [
+        {
+          category: 'Home'
+        },
+        {
+          category: 'Landing',
+          dropDown: []
+        },
+        {
+          category: 'Pages',
+          dropDown: []
+        },
+        {
+          category: 'Docs',
+          dropDown: []
+        },
+      ],
+      HeaderNavRight: [
+        'fa-brands fa-github',
+        'fa-solid fa-circle-info',
+        'fa-regular fa-user'
+      ],
+
+      FooterLinkSocial: [
+        'fa-brands fa-facebook-f',
+        'fa-brands fa-instagram',
+        'fa-brands fa-twitter',
+        'fa-brands fa-linkedin-in'
+      ],
+      FooterLinkGeneral: [
+        {
+          section: 'Company',
+          link: ['About us', 'Sevices', 'Team', 'Pricing', 'Project', 'Careers', 'Blog', 'Login']
+        },
+        {
+          section: 'Usefull Links',
+          link: ['Terms of Services', 'Privacy Policy', 'Documentation', 'ChangeLog', 'Components']
+        }
+      ],
+      PaymentMethods: [
+        'american-ex.png',
+        'discover.png',
+        'master-card.png',
+        'paypal.png',
+        'visa.png'
+      ],
     }
   }
+}
 </script>
 
 <template>
+  <MyHeader :HeaderNav="HeaderNavMiddle" :HeaderRight="HeaderNavRight" />
 
-  <MyHeader 
-    :HeaderNav="HeaderNavMiddle"
-    :HeaderRight="HeaderNavRight"
-  />
+  <MyMain />
 
-  <MyMain/>
-
-  <MyFooter
-    :socialLink="FooterLinkSocial"
-    :generalLink="FooterLinkGeneral"
-    :PaymentMethods="PaymentMethods"
-  />
-
+  <MyFooter :socialLink="FooterLinkSocial" :generalLink="FooterLinkGeneral" :PaymentMethods="PaymentMethods" />
 </template>
 
 <style lang="scss">
 @use './styles/general.scss';
-
 </style>

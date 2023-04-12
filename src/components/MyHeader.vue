@@ -1,11 +1,11 @@
 <script>
-    export default {
-        name:'MyHeader',
-        props:{
-            HeaderNav:Array,
-            HeaderRight:Array
-        }
+export default {
+    name: 'MyHeader',
+    props: {
+        HeaderNav: Array,
+        HeaderRight: Array
     }
+}
 
 </script>
 
@@ -23,7 +23,7 @@
             </nav>
             <nav class="RightNav">
                 <ul>
-                    <li>                    
+                    <li>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </li>
                     <li v-for="bottone in HeaderRight">
@@ -39,49 +39,62 @@
 
 <style lang="scss" scoped>
 @use '../styles/partials/variable';
-    
-    header{
-        padding: 10px 0;
-        background-color: variable.$bg-jumbotron;
-    }
-    .container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    img{
-        width: 150px;
-    }
-    ul{
-        display: flex;
-    }
-    li{
-        list-style: none;
+
+header {
+    padding: 10px 0;
+    background-color: variable.$bg-jumbotron;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img {
+    width: 150px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+.middleNav li {
+    display: inline-block;
+    padding: 0 20px;
+    font-weight: bolder;
+    display: flex;
+
+    i {
+        padding-left: 8px;
     }
 
-    .middleNav li{
-        display: inline-block;
-        padding: 0 20px;
-        font-weight: bolder;
-        display: flex;
-        i{
-            padding-left: 8px;
-        }
+    &:nth-child(2) {
+        color: variable.$header-selected-middle-nav;
     }
-    .RightNav ul li:first-child{
-        line-height: 32px;
-        margin-right: 10px;
-        color: gray;
-    }
+}
 
-    .RightNav button{
-        background-color: variable.$header-bg-btn;
-        color: variable.$header-color-text-btn;
-        border: 1px solid #2f55d41a;
-        padding: 8px;
-        margin: 0 4px;
-        border-radius: 5px;
-        box-shadow: 0 4px 4px 1px variable.$header-shadow-btn;
-    }
+.RightNav ul li:first-child {
+    line-height: 32px;
+    margin-right: 10px;
+    color: gray;
+}
 
-</style>
+.RightNav button {
+    background-color: variable.$header-bg-btn;
+    color: variable.$header-color-text-btn;
+    border: 1px solid #2f55d41a;
+    padding: 8px;
+    margin: 0 4px;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 1px variable.$header-shadow-btn;
+
+    &:hover {
+        background-color: variable.$header-color-text-btn;
+        color: variable.$header-shadow-btn;
+    }
+}</style>
