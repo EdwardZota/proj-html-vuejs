@@ -24,5 +24,9 @@ button {
     border: none;
     border-radius: 7px;
     font-weight: bolder;
+    transition: all 0.5s;
+    &:hover{
+        transform: scale(1.05);
+    }
 }
 </style>

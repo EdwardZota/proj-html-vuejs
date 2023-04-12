@@ -7,9 +7,24 @@ export default {
         generalLink: Array,
         PaymentMethods: Array
     },
+    data(){
+        return{
+            email:'',
+            errorMessage:''
+        }
+    },
     methods: {
         getImagePath: function (linkimage) {
             return new URL(`../assets/${linkimage}`, import.meta.url).href;
+        },
+        isValidEmail(){
+            if (this.email.length>7 && this.email.includes('@gmail.com')) {
+                this.errorMessage = 'La tua mail è valida! Ti abbiamo appena rubato tutti i tuoi dati,grazie per la tua collaborazione! '
+            } else {
+                this.errorMessage = 'accettiamo solo Gmail come posta elettronica';
+                this.email='';
+            }
+            
         }
     }
 }
@@ -41,8 +56,9 @@ export default {
                     <p>Sign up and receive the latest tips via email.</p>
                     <span>Write your email <span class="red">*</span></span> <br />
                     <i class="fa-regular fa-envelope"></i>
-                    <input type="email" name="email" placeholder="Your email:">
-                    <button>SubScribe</button>
+                    <input type="email" v-model="email" placeholder="Your email:" @keyup.enter="isValidEmail"> <br />
+                    <span>{{ errorMessage }}</span>
+                    <button @click="isValidEmail">SubScribe</button>
 
                 </div>
 

@@ -8,6 +8,8 @@ export default {
     },
     data() {
         return {
+            email:'',
+            errorMessage:'',
             textToBuyButton: 'Buy Now',
             textToSendMailButton: 'Get Started',
             allPlan: [
@@ -33,6 +35,17 @@ export default {
                     required: '*No Credit card required'
                 },
             ]
+        }
+        
+    },
+    methods:{
+        isValidEmail(){
+            if (this.email.length>7 && this.email.includes('@gmail.com')) {
+                this.errorMessage = 'La tua mail è valida! Ti abbiamo appena rubato tutti i tuoi dati,grazie per la tua collaborazione! '
+            } else {
+                this.errorMessage = 'accettiamo solo Gmail come posta elettronica';
+                this.email='';
+            }
         }
     }
 }
@@ -61,10 +74,11 @@ export default {
         <h1>Want to be among the first to find out?</h1>
         <p class="subtitle">Start working with <span class="colored"> Landrich</span> that can provide everything you need
             to generate <br> awareness, drive traffic, connect.</p>
-        <form>
-            <input type="email" id="emails" name="emails" placeholder="Email Address">
-            <BlueButton :name="textToSendMailButton" />
-        </form>
+        <div class="form">
+            <input type="email" id="emails" name="emails" placeholder="Email Address" v-model="email" @keyup.enter="isValidEmail">
+            <span>{{ errorMessage }}</span>
+            <BlueButton :name="textToSendMailButton"  @click="isValidEmail"/>
+        </div>
     </div>
 </template>
 
@@ -182,7 +196,7 @@ export default {
     font-weight: bolder;
 }
 
-form {
+.form {
     width: 600px;
     margin: auto;
     position: relative;
@@ -202,6 +216,9 @@ form {
         position: absolute;
         top: 4px;
         right: 4px;
+        &:hover{
+        transform: scale(1);
+        }
     }
 }
 @media screen and (max-width:630px) {
@@ -212,7 +229,7 @@ form {
             margin: 0 auto 50px;
         }
     }
-    form{
+    .form{
         width: 90%;
     }
     
