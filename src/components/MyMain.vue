@@ -11,13 +11,25 @@
             KeyFeatures,
             BuildTools,
             PlanChoice
+        },
+        data(){
+            return{
+                aziendeLogo:[
+                    'amazon.svg',
+                    'google.svg',
+                    'lenovo.svg',
+                    'paypal.svg',
+                    'shopify.svg',
+                    'spotify.svg'
+                ],
+            }
         }
     }
 </script>
 
 <template>
     <main>
-        <MyJumbotron />
+        <MyJumbotron :aziendeLogo="aziendeLogo"/>
         <KeyFeatures/>
         <BuildTools/>
         <PlanChoice/>
@@ -28,8 +40,5 @@
 
 <style lang="scss" scoped>
 @use '../styles/partials/variable';
-main{
-    margin-bottom: 150px;
-}
 
 </style>

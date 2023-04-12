@@ -7,7 +7,7 @@
         },
         data(){
             return{
-                button1:'Read More →'
+                button1:'Read More'
             }
         }
     }
@@ -40,10 +40,11 @@
         align-items: center;
         h1{
             margin-bottom: 15px;
+            color: variable.$title-build-tools-title-color;
         }
     }
     p,ul li{
-        color: variable.$text-color-jumbotron;
+        color: variable.$text-color-build-tools;
         font-weight: 500;
     }
     ul{
@@ -53,13 +54,18 @@
         list-style: none;
         line-height: 25px;
         i{
-            color: variable.$text-color-button;
+            color: variable.$text-color-build-tools-checked;
             font-size: 13px;
             margin-right: 5px;
         }
     }
     button{
         margin: 20px 0;
+        &::after{
+            content: '\290D';
+            padding-left: 5px;
+            font-size: 20px;
+        }
     }
     .rightSide{
         width: 50%;

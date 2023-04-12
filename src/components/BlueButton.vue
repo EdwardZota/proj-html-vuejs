@@ -19,8 +19,8 @@
 <style lang="scss" scoped>
 @use '../styles/partials/variable';
     button{
-        color: variable.$text-color-button-general;
-        background-color: variable.$background-color-button-general;
+        color: variable.$btn-text-color;
+        background-color: variable.$btn-bg-color;
         padding: 8px 15px;
         border: none;
         border-radius: 7px;

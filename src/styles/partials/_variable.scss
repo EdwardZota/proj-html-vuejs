@@ -1,26 +1,64 @@
-$background-color-principal:#ffffff;
-$background-jumbotron:#f8f9fc;
-$background-button-color:#2f55d41a;
-$background-button-shadow:#c5d0f2;
 
-$text-color-button:#2f55d4;
+/* general color */
+$bg-color-primary:#ffffff;
+$text-color-primary:#8492a6;
+$title-color:#000000;
+$bg-text-color-secondary:#2f55d4;
+$bg-img-badge-someButton:#2f55d41a;
 
-$text-color-jumbotron:#adb5bd;
+/* btn standard color */
+$btn-text-color:$bg-color-primary;
+$btn-bg-color:$bg-text-color-secondary;
 
-$background-color-button-general:#2f55d4;
-$text-color-button-general:#ffffff;
-$text-color-keyFeatures:#2eca8b;
+/* header color */
+$header-selected-middle-nav: $bg-text-color-secondary;
+$header-color-text-btn:$bg-text-color-secondary;
+$header-bg-btn:$bg-img-badge-someButton;
+$header-shadow-btn:#c5d0f2; //was not in the color palette
+
+/* jumbotron color */
+$bg-jumbotron:#f8f9fc;
+$setting-color:$bg-text-color-secondary;
+$badge-text-color:$bg-text-color-secondary;
+$badge-bg-color:$bg-img-badge-someButton;
+$badge-border-color:#c5d0f2; //was not in the color palette
+$title-color-jumbotron:$title-color;
+$text-color-jumbotron:$text-color-primary;
+$text-color-2nd-btn:$bg-text-color-secondary;
+
+/* keyfeatures color */
+$title-keyfeatures-title-card-color:$title-color;
+$text-color-keyfeatures:$text-color-primary;
+$bg-keyfeatures-card-image:$bg-img-badge-someButton;
+$color-keyfeatures-card-image:$bg-text-color-secondary;
+$symbol-color-keyFeatures:#2eca8b;
 
 
+/*little container in keyfeatures color*/
+$little-container-text-color:$bg-color-primary;
 $little-container-bg-color:#3c4858;
-$little-container-bg-bar-color:#4f5a69;
-$little-container-text-bar-color:#ffffff;
+$little-container-bg-bar-color:#4f5a69; //was not in the color palette
 $little-container-text-under-color:#8492a6;
 
+/* build tools color */
+$title-build-tools-title-color:$title-color;
+$text-color-build-tools:$text-color-primary;
+$text-color-build-tools-checked:$bg-text-color-secondary;
 
-$bg-color-footer:#202942;
-$text-color-footer:#adb5bd;
+/* plan choice color */
+$text-color-plan:$text-color-primary;
+$shadow-plan-color:$text-color-primary;
+$type-text-plan-color:$bg-text-color-secondary;
+$type-bg-plan-color:$bg-img-badge-someButton;
+$text-color-plan-checked:$bg-text-color-secondary;
+$border-plan-card:#e9ecef;
 
+/* footer color */
 $footer-color-bg-input:#27314f;
-$footer-color-text-button:#007bff;
+$text-color-footer:#adb5bd;
+$bg-color-footer:#202942;
+$bg-lower-button:#2b48aa;
+$footer-color-text-button:$bg-text-color-secondary;
 $footer-color-bg-button:#222e51;
+$footer-color-shadow-button:$bg-text-color-secondary;
+$footer-symbol-color:#e43f52;

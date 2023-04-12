@@ -80,19 +80,41 @@
     text-align: left;
     margin: 80px 0;
     .card{
-        box-shadow: 0 5px 2px -2px variable.$little-container-text-under-color;
+        box-shadow: 0 5px 2px -2px variable.$shadow-plan-color;
         border-radius: 10px;
         border: 1px solid lightgray;
         padding: 20px;
         width: 30%;
         font-weight: 500;
-        color: variable.$little-container-text-under-color;
+        color: variable.$text-color-plan;
+        position: relative;
+        &:nth-child(2)::after{
+            content: '';
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            background-image: url(../assets/cornerRibbonOrange.png);
+            background-size: cover;
+            position: absolute;
+            top: -6px;
+            right: -6px;
+        }
+        &:nth-child(2)::before{
+            content: 'Best';
+            color: white;
+            z-index: 2;
+            position: absolute;
+            top: 6px;
+            right: 3px;
+            transform: rotate(45deg);
+            font-size: 14px;
+        }
         .type{
-            background-color: variable.$background-button-color;
-            color: variable.$text-color-button;
+            background-color: variable.$type-bg-plan-color;
+            color: variable.$type-text-plan-color;
             border-radius: 20px;
             padding: 10px 20px;
-            border: 1px solid variable.$background-button-shadow;
+            border: 1px solid variable.$border-plan-card;
             font-weight: bolder;
         }
         .price{
@@ -116,7 +138,7 @@
                 list-style: none;
                 line-height: 25px;
                 i{
-                    color: variable.$text-color-button;
+                    color: variable.$text-color-plan-checked;
                     margin-right: 10px;
                 }
             }
@@ -135,23 +157,24 @@
     margin-top: 20px;
 }
 .colored{
-    color: variable.$text-color-button;
+    color: variable.$type-text-plan-color;
     font-weight: bolder;
 }
 form{
     width: 600px;
     margin: auto;
     position: relative;
-    margin-top: 25px;
+    margin: 25px auto 80px;
     input{
         width: 100%;
         border-radius: 50px;
-        border: 1px solid variable.$little-container-text-under-color;
+        border: 1px solid variable.$type-text-plan-color;
         padding: 15px 20px;
     }
     button{
         border-radius: 50px;
-        font-size: 20px;
+        width: 130px;
+        height: 39px;
         position: absolute;
         top: 4px;
         right: 4px;

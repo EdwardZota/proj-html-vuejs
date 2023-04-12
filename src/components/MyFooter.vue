@@ -5,7 +5,12 @@
         props:{
             socialLink:Array,
             generalLink:Array,
-            typeOfCard:Array
+            PaymentMethods:Array
+        },
+        methods:{
+            getImagePath: function(linkimage) {
+                return new URL(`../assets/${linkimage}`, import.meta.url).href;
+            }
         }
     }
 </script>
@@ -46,20 +51,15 @@
                 </div>
                 <div class="rightBottomFooter">
                     <ul>
-                        <li><img src="../assets/american-ex.png" alt="card"></li>
-                        <li><img src="../assets/discover.png" alt="card"></li>
-                        <li><img src="../assets/master-card.png" alt="card"></li>
-                        <li><img src="../assets/paypal.png" alt="card"></li>
-                        <li><img src="../assets/visa.png" alt="card"></li>
+                        <li v-for="(card,i) in PaymentMethods" :key="i" ><img :src="getImagePath(card)" :alt="card.slice(0,-4)"></li>
                     </ul>
                 </div>
+                <button><i class="fa-solid fa-arrow-up"></i></button>
     
             </div>
 
         </div>
-        <div id="hr">
-
-        </div>
+        <div id="hr"></div>
     </footer>
 
 </template>
@@ -126,7 +126,7 @@ footer{
             left: 14px;
         }
         .red{
-            color: red;
+            color: variable.$footer-symbol-color;
         }
         input,button{
             width: 100%;
@@ -138,6 +138,7 @@ footer{
         input{
             background-color: variable.$footer-color-bg-input;
             padding-left: 40px;
+            color: variable.$text-color-footer;
         }
         ::placeholder{
             color: variable.$text-color-footer;
@@ -145,7 +146,7 @@ footer{
         button{
             color: variable.$footer-color-text-button;
             background-color: variable.$footer-color-bg-button;
-            box-shadow: 0 2px 2px 2px variable.$background-color-button-general;
+            box-shadow: 0 4px 10px variable.$footer-color-shadow-button;
             font-weight: bolder;
 
         }
@@ -153,21 +154,35 @@ footer{
     .bottomFooter{
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-top: 80px;
+        height: 80px;
         p span{
-            color: red;
+            color: variable.$footer-symbol-color;
         }
         ul{
             display: flex;
             li{
                 list-style: none;
+                margin-right: 10px;
             }
+        }
+        button{
+            border: none;
+            height: 40px;
+            width: 40px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 23px;
+            right: 23px;
+            color: variable.$text-color-footer;
+            background-color: variable.$bg-lower-button;
         }
     }
     #hr{
         width: 100%;
         height: 1px;
-        background-color: lightgray;
+        background-color: variable.$footer-color-bg-button;
         position: absolute;
         left: 0;
         bottom: 100px;

@@ -78,18 +78,21 @@
 @use '../styles/partials/variable';
 .container{
     margin: 50px auto;
+    h1,h3{
+        color: variable.$title-keyfeatures-title-card-color;;
+    }
     .cards{
         display: flex;
         justify-content: space-between;
         margin: 50px 0;
         .card{
-            box-shadow: 0 0 2px variable.$text-color-jumbotron;
+            box-shadow: 0 0 2px variable.$color-keyfeatures-card-image;
             border-radius: 5px;
             padding: 20px;
             width: 23%;
             .image{
-                background-color: variable.$background-button-color;
-                color: variable.$text-color-button;
+                background-color: variable.$bg-keyfeatures-card-image;
+                color: variable.$color-keyfeatures-card-image;
                 display: inline-block;
                 font-size: 30px;
                 padding: 20px;
@@ -100,7 +103,7 @@
                 font-weight: 500;
             }
             p{
-                color: variable.$text-color-jumbotron;
+                color: variable.$text-color-keyfeatures;
                 margin: 20px 0;
             }
             a{
@@ -115,11 +118,11 @@ h1{
     margin-bottom: 30px;
 }
 .subtitle{
-    color: variable.$text-color-jumbotron;
+    color: variable.$text-color-keyfeatures;
     font-weight: 500;
 }
 .colored{
-    color: variable.$text-color-button;
+    color: variable.$color-keyfeatures-card-image;
     font-weight: bolder;
 }
 .container:last-child{
@@ -132,13 +135,13 @@ h1{
         width: 80%;
         margin: auto;
         font-weight: 500;
-        color: variable.$text-color-jumbotron;
+        color: variable.$text-color-keyfeatures;
         span:last-child{
             margin-left: 30px;
         }
     }
     .confirm i{
-        color: variable.$text-color-keyFeatures;
+        color: variable.$symbol-color-keyFeatures;
     }
     
 }
@@ -152,12 +155,12 @@ h1{
         display: flex;
         justify-content: center;
         background-color: variable.$little-container-bg-bar-color;
-        box-shadow: 0 0 1px 1px variable.$little-container-text-under-color;
+        border:1px solid variable.$little-container-text-under-color;
         border-radius: 10px;
         height: 50px;
         li{
             list-style: none;
-            color: variable.$little-container-text-bar-color;
+            color: variable.$little-container-text-color;
             width: 25%;
             text-align: center;
             border-radius: 10px;
@@ -176,7 +179,7 @@ h1{
         display: inline-block;
         margin: 5px 0;
         .symbol{
-            color: variable.$text-color-keyFeatures;
+            color: variable.$symbol-color-keyFeatures;
         }
     }
 }

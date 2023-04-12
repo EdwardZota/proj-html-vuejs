@@ -42,7 +42,7 @@
     
     header{
         padding: 10px 0;
-        background-color: variable.$background-jumbotron;
+        background-color: variable.$bg-jumbotron;
     }
     .container{
         display: flex;
@@ -75,13 +75,13 @@
     }
 
     .RightNav button{
-        background-color: variable.$background-button-color;
-        color: variable.$text-color-button;
-        border: none;
+        background-color: variable.$header-bg-btn;
+        color: variable.$header-color-text-btn;
+        border: 1px solid #2f55d41a;
         padding: 8px;
         margin: 0 4px;
         border-radius: 5px;
-        box-shadow: 0 3px 5px 1px variable.$background-button-shadow;
+        box-shadow: 0 4px 4px 1px variable.$header-shadow-btn;
     }
 
 </style>

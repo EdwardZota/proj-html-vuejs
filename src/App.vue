@@ -33,6 +33,7 @@
           'fa-solid fa-circle-info',
           'fa-regular fa-user'
         ],
+        
         FooterLinkSocial:[
           'fa-brands fa-facebook-f',
           'fa-brands fa-instagram',
@@ -48,7 +49,14 @@
             section:'Usefull Links',
             link:['Terms of Services','Privacy Policy','Documentation','ChangeLog','Components']
           }
-        ]
+        ],
+        PaymentMethods:[
+          'american-ex.png',
+          'discover.png',
+          'master-card.png',
+          'paypal.png',
+          'visa.png'
+        ],
       }
     }
   }
@@ -66,7 +74,7 @@
   <MyFooter
     :socialLink="FooterLinkSocial"
     :generalLink="FooterLinkGeneral"
-    :typeOfCard="FooterTypeOfCard"
+    :PaymentMethods="PaymentMethods"
   />
 
 </template>
