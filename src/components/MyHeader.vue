@@ -17,7 +17,10 @@ export default {
                 <ul>
                     <li v-for="elemento in HeaderNav">
                         {{ elemento.category.toUpperCase() }}
-                        <div v-if="elemento.dropDown"><i class="fa-solid fa-chevron-down"></i></div>
+                        <div v-if="elemento.dropDown">
+                            <i class="fa-solid fa-chevron-down "></i>
+                            
+                        </div>
                     </li>
                 </ul>
             </nav>

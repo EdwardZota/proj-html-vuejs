@@ -74,7 +74,7 @@ export default {
                                 :alt="card.slice(0, -4)"></li>
                     </ul>
                 </div>
-                <button><i class="fa-solid fa-arrow-up"></i></button>
+                <button><a href="#"><i class="fa-solid fa-arrow-up"></i></a></button>
 
             </div>
 
@@ -217,8 +217,10 @@ footer {
             position: absolute;
             bottom: 23px;
             right: 23px;
-            color: variable.$text-color-footer;
             background-color: variable.$bg-lower-button;
+            a{
+                color: variable.$text-color-footer;
+            }
         }
     }
 
