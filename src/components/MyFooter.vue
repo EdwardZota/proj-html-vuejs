@@ -259,12 +259,12 @@ footer {
 @media screen and (max-width:420px) {
     .container .topFooter{
         flex-wrap: wrap;
-        .topLeftFooter,footer .topRightFooter{
+        .topLeftFooter,.topRightFooter{
         width: 100%;
         margin-bottom: 20px;
         }
         .topRightFooter i{
-            top: 138px;
+            top: 96px;
         }
     }
 }
